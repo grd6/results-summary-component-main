@@ -1,0 +1,211 @@
+:root {
+  /*color*/
+  /*Primary*/
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  /*Gradients*/
+  --Light-slate-blue-background: hsl(252, 100%, 60%);
+  --Light-royal-blue-background: hsl(241, 81%, 54%);
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  /*Neutral*/
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+  --background-1: #fff6f5;
+  --background-2: #fffbf2;
+  --background-3: #f2fbfa;
+  --background-4: #f3f3fd;
+  --red: #e3989b;
+  --yellow: #e3cd86;
+  --green: #5cb4a1;
+  --purple: #7174b7;
+  --gray: #bec5c9;
+
+  /*Typography*/
+  --body-font: 18px;
+  --family: "Hanken Grotesk", sans-serif;
+}
+* {
+  margin: 0;
+}
+body {
+  margin: 30px;
+  font-size: var(--body-font);
+  font-family: var(--family);
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--White);
+  max-width: 1444px;
+  justify-content: center;
+}
+.left-content {
+  background: linear-gradient(
+    to top,
+    var(--Light-royal-blue-background),
+    var(--Light-slate-blue-background),
+    var(--Light-slate-blue-background)
+  );
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
+}
+.right-content {
+  background-color: var(--White);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 300px;
+  height: 400px;
+  margin-top: 15px;
+  margin-left: 55px;
+  margin-right: 55px;
+}
+.title-left {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: var(--Light-lavender);
+}
+.circle-content {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.circle {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to top,
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
+
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  align-items: center;
+  color: var(--Light-lavender);
+  justify-content: center;
+}
+.circle h1 {
+  color: var(--White);
+}
+
+.artice-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title-article {
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--White);
+}
+.article {
+  color: var(--Light-lavender);
+  margin: 30px 30px;
+
+  margin-top: 0.8rem;
+}
+
+.title-right {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  color: var(--Dark-gray-blue);
+  font-size: 1.197rem;
+  font-weight: 600;
+}
+.resuts-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.results {
+  color: var(--Dark-gray-blue);
+  display: flex;
+}
+.percentage {
+  color: var(--gray);
+  font-weight: 500;
+}
+.results-test-title-1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-1);
+  color: var(--red);
+  font-weight: 600;
+  margin-top: 15px;
+  height: 50px;
+  align-items: center;
+  border-radius: 10px;
+}
+.results-test-title-2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-2);
+  color: var(--yellow);
+  font-weight: 600;
+  height: 50px;
+  align-items: center;
+  border-radius: 10px;
+}
+.results-test-title-3 {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-3);
+  color: var(--green);
+  font-weight: 600;
+  height: 50px;
+  align-items: center;
+  border-radius: 10px;
+}
+.results-test-title-4 {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-4);
+  color: var(--purple);
+  font-weight: 600;
+  height: 50px;
+  align-items: center;
+  border-radius: 10px;
+}
+.resut-test {
+  display: flex;
+  justify-content: space-between;
+}
+.button{
+    border: none;
+    color: var(--White);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 25px 2px ;
+    padding: 10px 110px;
+    border-radius: 20px;
+    background-color: var(--Dark-gray-blue);
+
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1444px) {
+  .main-content {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
