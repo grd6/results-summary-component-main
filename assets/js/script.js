@@ -11,7 +11,7 @@ const showData = async () => {
 
 const updateHtml = (result) => {
   const container = document.querySelector(".resuts-content");
-  container.innerHTML = "";
+ // container.innerHTML = "";
   i = 0;
   result.forEach((item) => {
     ++i;
@@ -19,8 +19,14 @@ const updateHtml = (result) => {
     categoryDiv.className = `results-test-title-${i}`;
     categoryDiv.textContent = item.category;
 
+    const iconImg = document.createElement('img');
+    iconImg.className = 'icon';
+    iconImg.src = item.icon;
+
+
     const results1Div = document.createElement("div");
     results1Div.className = `results-${i}`;
+   
     const resultsDiv = document.createElement("div");
     resultsDiv.className = "results";
     resultsDiv.textContent = item.score;
@@ -29,9 +35,12 @@ const updateHtml = (result) => {
     percentageDiv.className = "percentage";
     percentageDiv.textContent = "/ 100";
 
+
+    resultsDiv.appendChild(iconImg)
     resultsDiv.appendChild(percentageDiv);
     results1Div.appendChild(resultsDiv);
     categoryDiv.appendChild(results1Div);
+    
     container.appendChild(categoryDiv);
   });
 };
